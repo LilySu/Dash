@@ -52,12 +52,6 @@ fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size
 column2 = dbc.Col(
     [
         dcc.Graph(figure=fig),
-    ]
-)
-
-column1 = dbc.Col(
-    [
-
         daq.Tank(
           id='my-daq-tank',
           min=0,
@@ -66,5 +60,7 @@ column1 = dbc.Col(
         )
     ]
 )
+
+
 
 layout = dbc.Row([column1, column2])
