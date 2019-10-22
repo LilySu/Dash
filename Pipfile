@@ -14,10 +14,7 @@ pandas = "*"
 joblib = "*"
 scikit-learn = "*"
 category_encoders = "*"
-dash-daq = "*"
-pandas = "*"
-os = "*"
-ipython = "*"
+dash_daq = "*"
 
 [requires]
 python_version = "3"
