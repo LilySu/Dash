@@ -4,6 +4,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import dash_daq as daq
 
 from app import app
 
@@ -51,6 +52,18 @@ fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size
 column2 = dbc.Col(
     [
         dcc.Graph(figure=fig),
+    ]
+)
+
+column1 = dbc.Col(
+    [
+
+        daq.Tank(
+          id='my-daq-tank',
+          min=0,
+          value=5,
+          max=10
+        )
     ]
 )
 
